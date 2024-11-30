@@ -1,0 +1,16 @@
+.table.table-hover{
+    width: 600px;
+    margin-bottom: auto;
+}
+
+.item1{
+    display: grid;
+    grid-template-areas: 'main main main right right';
+    gap: 200px;
+    padding: 30px;
+}
+
+.col-md-6{
+    width: 500px;
+}
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Online Learning Platform</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <!-- Added 'me-auto' to push content to the left -->
+
+              <!-- Links to other pages in the project -->
+              <li class="nav-item">
+                <a class="nav-link" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="courses.html">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="instructors.html">Instructors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="FAQ.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contactus.html"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex ms-auto" role="search">
+              <!-- Added 'ms-auto' to move form to the right -->
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <style>
+        /* Custom Styles for Images */
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+        .course-icon,
+        .achievement-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+            </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="row g-4">
+            <!-- Ongoing Courses -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ongoing Courses</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" class="course-icon rounded-circle" alt="Course Icon">
+                                    Full Stack Development
+                                </div>
+                                <button class="btn btn-primary btn-sm">Continue Course</button>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" class="course-icon rounded-circle" alt="Course Icon">
+                                    UI/UX Design
+                                </div>
+                                <button class="btn btn-primary btn-sm">Continue Course</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+             
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Achievements</h5>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Certificate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/40" class="achievement-icon rounded-circle" alt="Achievement Icon">
+                                            Data Science Basics
+                                        </div>
+                                    </td>
+                                    <td><button class="btn btn-success btn-sm">View Certificate</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/40" class="achievement-icon rounded-circle" alt="Achievement Icon">
+                                            Python for Beginners
+                                        </div>
+                                    </td>
+                                    <td><button class="btn btn-success btn-sm">View Certificate</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Information -->
+        <div class="mt-4">
+            <h5>Progress Summary</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="p-3 bg-light rounded text-center">
+                        <h6>Completed Courses</h6>
+                        <h3>4</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 bg-light rounded text-center">
+                        <h6>Ongoing Courses</h6>
+                        <h3>2</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 bg-light rounded text-center">
+                        <h6>Total Certificates</h6>
+                        <h3>3</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upgrade Plan Section -->
+        <div class="mt-4 text-center">
+            <button class="btn btn-warning btn-lg">Upgrade Plan</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html> <div class="container my-4">
+    <div class="row g-4">
+        <!-- Ongoing Courses -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ongoing Courses</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Web Development Basics</span>
+                            <span class="badge bg-success rounded-pill">80%</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // DOM Traversal and Modification: Add new course dynamically
+        const ongoingCourses = document.querySelector('.card-body ul');
+
+        const newCourse = document.createElement('li');
+        newCourse.className = 'list-group-item d-flex justify-content-between align-items-center';
+        newCourse.innerHTML = `
+            <span>JavaScript for Beginners</span>
+            <span class="badge bg-primary rounded-pill">40%</span>
+        `;
+        ongoingCourses.appendChild(newCourse);
+
+        // DOM Attribute Modification: Make course names editable
+        document.querySelectorAll('.list-group-item span:first-child').forEach((span) => {
+            span.addEventListener('click', () => {
+                span.setAttribute('contenteditable', 'true');
+                span.focus();
+                span.classList.add('highlight'); // Highlight editable area
+            });
+
+            span.addEventListener('blur', () => {
+                span.setAttribute('contenteditable', 'false');
+                span.classList.remove('highlight');
+            });
+        });
+
+        // CSS Manipulation: Change card background on hover
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('mouseover', () => {
+                card.style.backgroundColor = '#f9f9f9';
+            });
+
+            card.addEventListener('mouseout', () => {
+                card.style.backgroundColor = '#fff';
+            });
+        });
+
+        // JavaScript Effects: Add scaling effect on card hover
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transition = '0.3s ease-in-out';
+                card.style.transform = 'scale(1.05)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // HTML Events: Handle search form submission
+        const searchForm = document.querySelector('form');
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the form from reloading the page
+            const searchTerm = event.target.querySelector('input').value;
+            alert(`Searching for: ${searchTerm}`);
+        });
+
+        // Handle "Contact Us" page link click
+        const contactUsLink = document.querySelector('.nav-link.active');
+        contactUsLink.addEventListener('click', () => {
+            alert('You are already on the Contact Us page!');
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

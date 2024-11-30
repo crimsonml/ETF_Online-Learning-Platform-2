@@ -10,9 +10,8 @@
     />
     <style>
       body {
-        /* Adjust for fixed navbar */
-        padding-top: 56px;
-        background-color: #f0f0f0; /*darker background color*/
+        padding-top: 56px; /* Adjust for fixed navbar */
+        /* background-color: #f0f0f0; Slightly darker background color */
       }
       .faq-section {
         padding: 60px 0;
@@ -100,9 +99,11 @@
 
     <!-- FAQ Content -->
     <div class="container faq-section">
-      <h1 class="faq-header text-center">Frequently Asked Questions</h1>
+      <h1 class="faq-header text-center" id="faq-header">
+        Frequently Asked Questions
+      </h1>
 
-      <!-- Image Type - Responsive image(img-fluid) -->
+      <!-- Responsive Image -->
       <div class="text-center mb-5">
         <img
           src="FAQpics/faq.jpg"
@@ -112,7 +113,7 @@
         />
       </div>
 
-      <!-- General Questions / table type SmallTable(table-sm) -->
+      <!-- General Questions -->
       <div class="row justify-content-center">
         <div class="col-md-8">
           <table class="table table-sm faq-table text-center">
@@ -123,10 +124,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>What is this platform?</td>
-                <td>This is an online learning platform.</td>
-              </tr>
               <tr>
                 <td>How do I sign up?</td>
                 <td>Click on the sign-up button on the homepage.</td>
@@ -223,6 +220,10 @@
                 <td>How do I delete my account?</td>
                 <td>Contact our support team to request account deletion.</td>
               </tr>
+              <tr>
+                <td>What is this platform?</td>
+                <td>This is an online learning platform.</td>
+              </tr>
             </tbody>
           </table>
 
@@ -257,7 +258,7 @@
             </div>
           </div>
 
-          <!-- Image / Tumbnail Image(img-thumbnail) -->
+          <!-- Image -->
           <div class="text-center">
             <img
               src="FAQpics/grow-questioning.jpg"
@@ -275,21 +276,63 @@
     <script>
       // SCROLL event function for image to appear from below
       $(document).ready(function () {
+        // Set background color using jQuery
+        $("body").css("background-color", "#f0f0f0");
+
         $(window).scroll(function () {
           var scroll = $(window).scrollTop();
           var imageOffset = $("#scroll-image").offset().top;
           var windowHeight = $(window).height();
 
+          //javascript effect to make image appear from below called scroll event
           if (scroll + windowHeight > imageOffset) {
             $("#scroll-image").addClass("visible");
           }
 
-          // Adjust opacity of the top image based on scroll position
+          // Adjust opacity of the top image based on scroll position(scroll-based opacity adjustment)
           var topImage = $("#top-image");
           var topImageHeight = topImage.height();
           var opacity = 1 - scroll / topImageHeight;
           topImage.css("opacity", opacity);
         });
+
+        // Move "What is this platform?" question to the top
+        var firstQuestion = $("td:contains('What is this platform?')").closest(
+          "tr"
+        );
+        firstQuestion.prependTo("tbody");
+
+        // DOM traversal to the primary button labeled "Sign Up Now"
+        var signUpButton = $(".btn-primary:contains('Sign Up Now')");
+        signUpButton.on("click", function () {
+          $(this).removeClass("btn-primary").addClass("btn-danger");
+        });
+
+        // Change the topic color to red on hover
+        $("#faq-header").hover(
+          function () {
+            $(this).css("color", "red");
+          },
+          function () {
+            $(this).css("color", "");
+          }
+        );
+
+        // Change the color of the table headers "Question" and "Answer" to purple
+        $("th:contains('Question'), th:contains('Answer')").css(
+          "color",
+          "purple"
+        );
+
+        // Add a title attribute to the table headers "Question" and "Answer"(DOM attribute modification)
+        $("th:contains('Question')").attr(
+          "title",
+          "This column contains questions"
+        );
+        $("th:contains('Answer')").attr(
+          "title",
+          "This column contains answers"
+        );
       });
     </script>
   </body>
